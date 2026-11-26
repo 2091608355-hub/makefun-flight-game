@@ -1,0 +1,41 @@
+/* Skylark Courier — page chrome around the canvas. The game itself
+   draws everything; this only centres the frame and keeps it readable. */
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #0b1118;
+  color: #dfe8f0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+#stage {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+}
+
+#game {
+  width: min(1280px, 96vw);
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
+  background: #2f6fb4;
+  border-radius: 10px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+  cursor: crosshair;
+}
+
+#hint {
+  margin: 0;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: #8fa2b3;
+  text-align: center;
+}
